@@ -19,5 +19,7 @@ let gdc = (a,b) => {
 //console.log(gdc(12, 8));
 
 let lcm = (a, b) => {
-    
+    if(a % b == 0){
+        return 
+    }
 }
