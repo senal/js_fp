@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div id="product"></div>
+    </body>
+    <script>
+            // create some objects to store the data.
+            var columnbain = {
+                name: 'columnbian',
+                basePrice: 5
+            };
+            var frenchRoast = {
+                name: 'French roast',
+                basePrice: 8
+            };
+            var decaf = {
+               name: 'Decaf',
+               basePrice: 6
+            };
+   
+            // user helper function to calculate the cost base on the size
+            function printPrice(coffee, size){
+                
+                if(size == 'small'){
+                    var price = coffee.basePrice + 2
+                }
+                else if(size == 'medium'){
+                    var price = coffee.basePrice + 4
+                }else {
+                    var price = coffee.basePrice + 6;
+                }
+                // crate new html list item
+                var node = document.createElement("li");
+                var label = coffee.name + ' ' + size;
+                var textnode = document.createTextNode(label + ' price  $' + price);
+                node.appendChild(textnode);
+                document.getElementById("product").appendChild(node);
+            }
+   
+            printPrice(columnbain, 'small');
+            printPrice(columnbain, 'medium');
+            printPrice(columnbain, 'large');
+   
+           </script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div id="msg"></div>
+    </body>
+    <script >
+        let printAnyWhere = (msg, h, w) => {
+            let elem = document.createElement("div");
+            elem.textContent = msg;
+            elem.style.position  =  "absolute";
+            elem.style.top = h;
+            elem.style.left = w;
+            return elem;
+        };
+
+    let names = ["Ranga", "Senal", "Fernando"];
+    names.map((s, i) => printAnyWhere("Hello" + s, 400*i*100, 200*i*10)).forEach((e) => document.body.appendChild(e));
+    //let print = printAnyWhere("Hello Ranga", window.innerHeight/2+10+"px", window.innerWidth/2+10+"px");
+    
+    </script>
+</html>
