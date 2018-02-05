@@ -7,3 +7,4 @@ console.log(numbers.reduce((p, c) => p+c ));
 // find the largest number
 
 console.log(numbers.reduce((p, c) => Math.max(p, c)));
+
